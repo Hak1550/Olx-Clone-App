@@ -12,86 +12,89 @@ import { render } from "@testing-library/react";
 import { connect } from 'react-redux'
 import { selectedProduct } from '../Store/action';
 import { bindActionCreators } from 'redux'
-
-class ActualCards extends Component {
-
-
-  render() {
-
-    // const selectedProduct = () =>{
-
-    //   let productDatas = 
-    //     {
-    //       image:  this.props.image,
-    //       details:  this.props.details,
-    //       price: this.props.price,
-    //       area: this.props.area,
-    //       date: this.props.date
-    //    }
+import ActualProduct from './ActualProduct'
+import { Link } from 'react-router-dom';
 
 
-    //    console.log('selected product====>',productDatas)
-    // }
-    //  const classes = useStyles();
+function ActualCards(props) {
 
-    //  const useStyles = makeStyles({
-    //    root: {
-    //      maxWidth: 345,
-    //    },
-    //  });
 
-    console.log(this.props)
 
-    return (
-      <div>
+  // const selectedProduct = () =>{
 
-        <div className="row">
-          <Card onClick={() => this.props.selectedProduct()} className="card col-lg-10">
+  //   let productDatas = 
+  //     {
+  //       image:  this.props.image,
+  //       details:  this.props.details,
+  //       price: this.props.price,
+  //       area: this.props.area,
+  //       date: this.props.date
+  //    }
+
+
+  //    console.log('selected product====>',productDatas)
+  // }
+  //  const classes = useStyles();
+
+  //  const useStyles = makeStyles({
+  //    root: {
+  //      maxWidth: 345,
+  //    },
+  //  });
+
+  console.log(props)
+
+  return (
+    <div>
+
+      <div className="row">
+        <Link to="/actualproduct">
+          <Card className="card col-lg-10">
             <CardActionArea>
               <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
                 height="140"
-                image={this.props.image}
+                image={props.image}
                 title="Contemplative Reptile"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                  {this.props.price}
+                  {props.price}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  {this.props.details}
+                  {props.details}
                 </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
               <Button size="small" color="primary">
-                {this.props.area}
+                {props.area}
               </Button>
               <Button size="small" color="primary">
-                {this.props.date}
+                {props.date}
               </Button>
             </CardActions>
             <div className="sideLine"></div>
           </Card>
-        </div>
-
+        </Link>
       </div>
-    )
-  };
+
+    </div>
+  )
+};
+
+
+const mapStateToProps = (state) => ({
+  CardDetails: state.CardDetails,
+})
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ selectedProduct: selectedProduct }, dispatch)
 }
+export default connect(mapStateToProps, null)(ActualCards)
 
 
-// const mapStateToProps = (state) => ({
-//   // CardDetails: state.CardDetails,
-// })
-
-// // function mapDispatchToProps(dispatch) {
-// //   return bindActionCreators({ selectedProduct: selectedProduct }, dispatch)
-// // }
-export default ActualCards
-
-// connect(mapStateToProps, null)
 
 
 

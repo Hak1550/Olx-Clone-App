@@ -1,4 +1,4 @@
-import React, { useStyles, useState } from 'react'
+import React, { useState } from 'react'
 import { Input } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
@@ -60,9 +60,10 @@ const SellForm = () => {
 
 
 
-  const classes = useStyles();
-  const handleChange = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.value });
+  const classes = makeStyles;
+
+  const handleChange = (props) => (event) => {
+    setValues({ ...values, [props]: event.target.value });
   };
 
   const [values, setValues] = React.useState({

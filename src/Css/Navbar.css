@@ -1,18 +1,17 @@
-.nav{
+.navbar{
+    margin: auto;
+    margin-top: 75px;
+    background-color: #fff;
+}
+.navbar-nav{
+    background-color: #fff;
     display: flex;
     flex-direction: row;
-    margin: 5 auto;
-
-}
-.navbar{
-    margin-top: 58px;
-    color: black !important;
+    /* margin:  auto 0; */
+    /* color: black !important; */
 }
 .dropdown-toggle{
     font-weight: 900;
-}
-.navbar-nav{
-    margin: auto;
 }
 .nav-item{
     margin: 1px 15px;
@@ -22,4 +21,9 @@
 .nav-item a{
     text-decoration: none;
     color: #000;
+}
+
+.nav-item a:hover{
+    text-decoration: none;
+    color: #666;
 }

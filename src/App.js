@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from './Components/Header'
@@ -8,14 +7,21 @@ import Navbar from './Components/Navbar'
 import Olxfront from './Components/Olxfront'
 import SellForm from './Components/SellForm'
 import Recomendation from './Components/Recomendation'
+import ActualProduct from './Components/ActualProduct'
 
 
 
 
-function App() {
+function App(props) {
   return (
-    <Router>
+
+<Router>
       <Switch>
+        <Route path="/actualproduct">
+          <Header />
+          <ActualProduct />
+          <Footer />
+        </Route>
         <Route path="/sellform">
           <Header />
           <SellForm />
