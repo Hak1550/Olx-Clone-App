@@ -1,0 +1,53 @@
+.card-img-top{
+    /* text-align: center; */
+    /* margin-top: 10px; */
+}
+.card{
+    margin: 20px 10px;
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+
+    /* padding: 10px;     */
+}
+.card:hover{
+    box-shadow: 5px 3px 5px 2px gray;
+}
+h3{
+    margin-left: 105px;
+    margin-top: 25px;
+}
+.far{
+    position: absolute;
+    right:  25px;
+    top: 15px;
+    cursor: pointer;
+    color: rgba(245, 0, 0, 0.4);
+    font-size: 25px;
+}
+.card-title{
+    margin-left: -10px;
+    font-weight: 700;
+    font-size: 25px;
+}
+small{
+    margin: 0 10px;
+}
+.sideLine{
+    width: 0.5em;
+    height: 7em;
+    background-color: #FF6D00;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.text-muted{
+    font-size: 10px;
+}
+.CardsBunch{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: center;
+}

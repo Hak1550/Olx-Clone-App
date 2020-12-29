@@ -1,0 +1,15 @@
+.navbar{
+    margin-top: 58px;
+    color: black !important;
+}
+.dropdown-toggle{
+    font-weight: 900;
+}
+.navbar-nav{
+    margin: auto;
+}
+.nav-item{
+    margin: 1px 15px;
+    color: black !important;
+
+}

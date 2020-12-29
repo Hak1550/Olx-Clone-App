@@ -1,0 +1,31 @@
+body {
+    background-color: #F2F3F4;
+}
+
+.nav {
+    padding: 5px 0;
+    background-color: #F2F3F4;
+    width: 100%;
+    box-shadow: 1px 1px 5px 2px gray;
+}
+
+.sellBtn {
+    width: 90%;
+    cursor: pointer;
+}
+
+.nav-item {
+    margin: auto 55px;
+}
+
+.fas {
+    cursor: pointer;
+    padding: 8px;
+}
+
+.fas:hover {
+    background-color: rgba(150, 200, 200, 0.5);
+    color: white;
+    padding: 8px;
+    border-radius: 50%;
+}
