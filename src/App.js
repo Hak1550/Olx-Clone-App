@@ -1,25 +1,36 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Header from './Components/Header'
+import Footer from './Components/Footer'
+import Navbar from './Components/Navbar'
+import Olxfront from './Components/Olxfront'
+import SellForm from './Components/SellForm'
+import Recomendation from './Components/Recomendation'
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Haris Ali Khan here.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/sellform">
+          <Header />
+          <SellForm />
+          <Footer />
+        </Route>
+
+        <Route path="/">
+          <Header />
+          <Navbar />
+          <Olxfront />
+          <Recomendation />
+          <Footer />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
